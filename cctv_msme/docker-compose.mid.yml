@@ -1,0 +1,22 @@
+# Tier: MID — 4-12 cameras on a workstation / entry GPU or strong CPU.
+#   docker compose -f docker-compose.yml -f docker-compose.mid.yml up --build
+#
+# Enables cross-camera ReID stitching and nightly batch reprocessing.
+
+services:
+  backend:
+    environment:
+      CLIP_MODEL: ViT-B-32
+      CLIP_PRETRAINED: laion400m_e32
+      CLIP_INFERENCE_THREADS: 4
+      FRAME_SAMPLE_INTERVAL_DEFAULT: 0.2
+      PREVIEW_FPS: 2
+      DETECTOR_MODEL: yolov8s
+      DETECTOR_CONFIDENCE_THRESHOLD: 0.35
+      REID_MODEL: osnet_x1_0_msmt17
+      REID_ENABLED_DEFAULT: 1
+      BATCH_REPROCESS_ENABLED_DEFAULT: 1
+      EDGE_ADAPTIVE_LOAD: 1
+      RETENTION_HOURS_DEFAULT: 72
+      NUMPY_STORE_MAX_VECTORS: 50000
+      SEED_DEMO_SIM_CAMERAS: 1

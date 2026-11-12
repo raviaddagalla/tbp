@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "outline": "#767586",
+          "error-container": "#fee2e2",
+          "secondary-fixed-dim": "#fecdd3",
+          "tertiary-container": "#00885d",
+          "primary-container": "#6063ee",
+          "tertiary-fixed-dim": "#4edea3",
+          "surface-container-low": "#eff4ff",
+          "on-tertiary-fixed-variant": "#005236",
+          "primary-fixed": "#e1e0ff",
+          "secondary": "#e11d48",
+          "surface-container": "#e5eeff",
+          "on-surface": "#0f172a",
+          "on-secondary-fixed-variant": "#9f1239",
+          "surface-tint": "#4648d4",
+          "surface": "#f8f9ff",
+          "on-surface-variant": "#475569",
+          "surface-bright": "#ffffff",
+          "background": "#f8f9ff",
+          "on-primary": "#ffffff",
+          "on-tertiary-container": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "surface-dim": "#e2e8f0",
+          "tertiary-fixed": "#6ffbbe",
+          "tertiary": "#059669",
+          "inverse-on-surface": "#f8fafc",
+          "surface-container-highest": "#dbeafe",
+          "outline-variant": "#cbd5e1",
+          "primary-fixed-dim": "#c0c1ff",
+          "on-background": "#0f172a",
+          "on-primary-container": "#ffffff",
+          "on-secondary-fixed": "#4c0519",
+          "inverse-surface": "#1e293b",
+          "on-tertiary": "#ffffff",
+          "on-tertiary-fixed": "#022c22",
+          "secondary-container": "#ffe4e6",
+          "on-primary-fixed-variant": "#3730a3",
+          "on-secondary-container": "#9f1239",
+          "on-secondary": "#ffffff",
+          "surface-variant": "#f1f5f9",
+          "on-primary-fixed": "#1e1b4b",
+          "surface-container-high": "#e2e8f0",
+          "primary": "#4648d4",
+          "on-error-container": "#991b1b",
+          "error": "#dc2626",
+          "inverse-primary": "#c0c1ff",
+          "secondary-fixed": "#ffe4e6",
+          "on-error": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.375rem",
+          "lg": "0.625rem",
+          "xl": "0.875rem",
+          "2xl": "1.25rem",
+          "3xl": "1.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-md": "1.25rem",
+          "space-xs": "0.25rem",
+          "gutter": "1rem",
+          "space-lg": "1rem",
+          "margin": "1rem",
+          "space-sm": "0.5rem",
+          "space-md": "0.75rem",
+          "margin-lg": "2rem",
+          "space-xl": "1.5rem",
+          "margin-md": "1.5rem",
+          "gutter-lg": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-md": ["Plus Jakarta Sans"],
+          "label-md": ["Space Grotesk"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-xl": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "label-sm": ["Space Grotesk"],
+          "label-lg": ["Space Grotesk"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-[#f8f9ff] font-body-md text-slate-700 antialiased selection:bg-indigo-100 selection:text-indigo-800"><aside class="fixed left-0 top-0 h-full w-72 bg-white z-50 flex flex-col justify-between border-r border-slate-200/80 shadow-[4px_0_24px_rgba(70,72,212,0.03)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between border-b border-slate-100 bg-slate-50/50"><div class="flex items-center gap-space-sm"><img alt="SmartSight AI Logo" class="h-8 w-auto object-contain rounded-lg p-0.5 bg-indigo-50 border border-indigo-100" src="https://lh3.googleusercontent.com/aida/ALJJyrAFTSWCY_Vz7a_sN2lYYvvdl-xGt5daUolHxy-2MSITLB05TP7ketIXaVlZtE6ZvxkbDlJNh5s7RMeuPlRtb0UK6MQTbg9nU1ZRsSDs63Y2UlvWWjY4Ppm0hd_ND0XkNMXySSPNO9_N5QGH1eRGVxRbMZf-YPBVPeTdvkxCy44_0VQ9i4vTmsW8TVe1HUY17dkUypBNTuchJk19AU3QeFTSwEE_3R8WeSSz7d-aBWDE"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-slate-900 font-bold">SmartSight</span><span class="font-label-sm text-[10px] text-indigo-600 font-semibold tracking-wider">AI CORE LABS ✨</span></div></div><div class="h-2.5 w-2.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)] animate-pulse"></div></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-[11px] text-slate-400 font-bold uppercase tracking-wider px-space-xs">Operations Suite</span></div><nav class="flex flex-col gap-1.5 px-space-md" data-active-classes="bg-indigo-600 text-white font-headline-md rounded-xl shadow-md shadow-indigo-200"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-body-md text-slate-600 hover:bg-slate-100/80 hover:text-slate-900 transition-all font-medium" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400">dashboard</span><span>Overview</span></a><a class="flex items-center justify-between px-space-md py-2.5 rounded-xl font-body-md text-slate-600 hover:bg-slate-100/80 hover:text-slate-900 transition-all font-medium" data-path="live-camera" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-slate-400">videocam</span><span>Live Camera</span></div><span class="flex items-center gap-1 font-label-sm text-xs text-rose-700 bg-rose-50 border border-rose-200 px-2 py-0.5 rounded-full font-bold"><span class="h-1.5 w-1.5 rounded-full bg-rose-500 animate-ping"></span>REC</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2.5 transition-all bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-headline-md rounded-xl shadow-md shadow-indigo-200" data-path="smart-search" href="#"><span class="material-symbols-outlined text-[20px]">saved_search</span><span class="font-semibold">Smart Search</span><span class="ml-auto text-xs bg-white/20 px-1.5 py-0.5 rounded-md font-mono">AI</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-body-md text-slate-600 hover:bg-slate-100/80 hover:text-slate-900 transition-all font-medium" data-path="recordings" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400">video_file</span><span>Recordings</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-body-md text-slate-600 hover:bg-slate-100/80 hover:text-slate-900 transition-all font-medium" data-path="detection-activity" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400">center_focus_strong</span><span>Detection Activity</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-xl font-body-md text-slate-600 hover:bg-slate-100/80 hover:text-slate-900 transition-all font-medium" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400">tune</span><span>Settings</span></a></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-indigo-50/50 border border-indigo-100/80 m-space-sm rounded-2xl"><div class="flex items-center justify-between p-2 rounded-xl bg-white shadow-sm border border-slate-100"><div class="flex items-center gap-space-xs"><span class="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_6px_rgba(16,185,129,0.8)]"></span><span class="font-label-sm text-xs font-bold text-slate-800">ESP32-CAM STREAM</span></div><span class="font-label-sm text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">ONLINE</span></div><div class="font-label-sm text-[11px] text-slate-500 px-space-xs font-mono select-all break-all">192.168.1.144:81/stream</div><div class="flex flex-wrap gap-1.5 pt-space-xs"><span class="font-label-sm text-[11px] text-indigo-700 font-semibold bg-indigo-100/70 px-2 py-0.5 rounded-lg">YOLOv8</span><span class="font-label-sm text-[11px] text-sky-700 font-semibold bg-sky-100/70 px-2 py-0.5 rounded-lg">ByteTrack</span><span class="font-label-sm text-[11px] text-amber-700 font-semibold bg-amber-100/70 px-2 py-0.5 rounded-lg">CLIP ViT-B/32</span><span class="font-label-sm text-[11px] text-emerald-700 font-semibold bg-emerald-100/70 px-2 py-0.5 rounded-lg">ChromaDB</span></div><div class="pt-space-xs flex items-center justify-between text-slate-400 font-label-sm text-[11px]"><span>v2.4.0-playful</span><span class="text-slate-500 font-medium">College CV Lab</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-white/80 backdrop-blur-xl z-40 flex items-center justify-between px-space-lg border-b border-slate-200/80 shadow-[0_2px_12px_rgba(0,0,0,0.02)]"><div class="flex items-center gap-space-sm"><span class="font-label-md text-xs font-bold text-slate-400 uppercase tracking-wider">CV_NODE</span><span class="font-label-md text-xs text-slate-300">/</span><span class="font-label-md text-xs font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-lg flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-indigo-500"></span>FEED_CLUSTER_01</span></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-sm"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-xl bg-slate-100/80 border border-slate-200/60"><span class="font-label-sm text-xs text-slate-500 font-medium">FPS:</span><span class="font-label-sm text-xs font-bold text-emerald-600">28.4</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-xl bg-slate-100/80 border border-slate-200/60"><span class="font-label-sm text-xs text-slate-500 font-medium">AI LATENCY:</span><span class="font-label-sm text-xs font-bold text-indigo-600">42ms</span></div><div class="flex items-center gap-space-xs px-space-sm py-1 rounded-xl bg-slate-100/80 border border-slate-200/60"><span class="font-label-sm text-xs text-slate-500 font-medium">STREAM:</span><span class="font-label-sm text-xs font-bold text-slate-700">1080p@30fps</span></div></div><div class="flex items-center gap-2"><button class="h-9 px-3 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center gap-1.5 font-label-sm text-xs font-semibold shadow-sm" title="Capture Snapshot" type="button"><span class="material-symbols-outlined text-[18px] text-slate-500">photo_camera</span><span class="hidden sm:inline">Snapshot</span></button><button class="h-9 w-9 rounded-xl bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center shadow-sm" title="Mute Stream Audio" type="button"><span class="material-symbols-outlined text-[18px]">volume_off</span></button><button class="h-9 px-3 rounded-xl bg-rose-50 border border-rose-200 hover:bg-rose-100 text-rose-700 transition-all flex items-center gap-1.5 font-label-sm text-xs font-bold shadow-sm" title="Emergency Threat Flag" type="button"><span class="material-symbols-outlined text-[18px] text-rose-600">warning</span><span class="hidden sm:inline">Alert Flag</span></button></div><div class="flex items-center gap-2.5 pl-2 border-l border-slate-200"><div class="hidden md:flex flex-col items-end"><span class="font-label-sm text-xs font-bold text-slate-800">Engineer_402</span><span class="font-label-sm text-emerald-600 text-[10px] font-semibold bg-emerald-50 px-1.5 py-0.2 rounded">Authorized</span></div><div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-indigo-600 text-white flex items-center justify-center shadow-md shadow-indigo-200"><span class="material-symbols-outlined text-[19px]">person</span></div></div></div></header><main class="relative pt-16 bg-[#f8f9ff] min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Cheerful Ambient Section -->
+<div class="relative w-full px-space-lg py-space-md flex flex-col gap-space-md">
+<!-- SEARCH COMMAND CENTER -->
+<section class="relative w-full rounded-2xl bg-white p-space-lg border border-slate-200/90 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden">
+<!-- Cheerful Pastel Glow Accents -->
+<div class="absolute -right-16 -top-16 w-72 h-72 rounded-full bg-indigo-100/60 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-16 -bottom-16 w-72 h-72 rounded-full bg-amber-100/60 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<!-- Sub-Header Meta Row -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-xl bg-indigo-100 text-indigo-600 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">auto_awesome</span>
+</span>
+<span class="font-label-sm text-xs text-indigo-900 font-bold tracking-wide uppercase">CHROMA_DB // CLIP ViT-B/32 VECTOR SEARCH</span>
+<span class="text-slate-300 font-bold">•</span>
+<span class="font-label-sm text-xs text-emerald-700 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full font-semibold flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>ONLINE · 842,109 FRAMES EMBEDDED</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-200/70">
+<span class="h-2 w-2 rounded-full bg-indigo-500 animate-pulse"></span>
+<span class="font-label-sm text-xs text-slate-500 font-medium">DIM:</span>
+<span class="font-label-sm text-xs text-slate-800 font-bold">512-D</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-50 border border-slate-200/70">
+<span class="font-label-sm text-xs text-slate-500 font-medium">INDEX:</span>
+<span class="font-label-sm text-xs text-slate-800 font-bold">HNSW COSINE</span>
+</div>
+</div>
+</div>
+<!-- Semantic Input Bar -->
+<div class="flex flex-col md:flex-row items-stretch gap-3">
+<div class="relative flex-1 group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 flex items-center gap-2 pointer-events-none">
+<span class="material-symbols-outlined text-indigo-600 text-[22px] transition-transform group-focus-within:scale-110">psychology</span>
+<span class="font-label-sm text-xs text-indigo-600 font-bold tracking-wider hidden sm:inline">PROMPT:</span>
+</div>
+<input class="w-full h-14 pl-12 sm:pl-32 pr-20 rounded-2xl bg-slate-50/80 border-2 border-slate-200/80 text-slate-900 font-body-lg text-[15px] placeholder:text-slate-400 focus:outline-none focus:border-indigo-500 focus:bg-white focus:ring-4 focus:ring-indigo-100 transition-all shadow-inner" id="vector-search-input" placeholder="Describe what you're looking for (e.g. 'Person carrying a red backpack')..." type="text" value="Person carrying a red backpack"/>
+<!-- Clear & Audio Trigger -->
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
+<button class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-colors" title="Voice Search Transcription" type="button">
+<span class="material-symbols-outlined text-[19px]">mic</span>
+</button>
+<button class="w-8 h-8 rounded-xl flex items-center justify-center text-slate-400 hover:text-slate-700 hover:bg-slate-200/60 transition-colors" onclick="document.getElementById('vector-search-input').value='';" title="Clear" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Execute Button -->
+<button class="h-14 px-7 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-700 hover:to-indigo-600 text-white font-headline-md font-bold rounded-2xl flex items-center justify-center gap-2.5 shadow-lg shadow-indigo-200 hover:shadow-indigo-300 transition-all active:scale-[0.98] whitespace-nowrap" id="run-search-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">search_spark</span>
+<span>Run Semantic Search</span>
+<span class="hidden xl:inline-block font-label-sm text-xs px-2 py-0.5 rounded-lg bg-white/20 text-white font-semibold">⌘↵</span>
+</button>
+</div>
+<!-- Quick Query Suggestion Chips (Playful Colorful Badges) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5">
+<span class="font-label-sm text-xs text-slate-400 font-bold uppercase tracking-wider whitespace-nowrap pl-1">Try Prompts:</span>
+<button class="query-pill active flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-semibold hover:bg-rose-100 hover:shadow-sm transition-all whitespace-nowrap" type="button">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>🎒 Person carrying a red backpack</span>
+</button>
+<button class="query-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 font-label-sm text-xs font-semibold hover:bg-amber-100 hover:shadow-sm transition-all whitespace-nowrap" type="button">
+<span>🚪 Someone entering through doorway</span>
+</button>
+<button class="query-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-800 font-label-sm text-xs font-semibold hover:bg-sky-100 hover:shadow-sm transition-all whitespace-nowrap" type="button">
+<span>🧥 A person wearing a black jacket</span>
+</button>
+<button class="query-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-label-sm text-xs font-semibold hover:bg-emerald-100 hover:shadow-sm transition-all whitespace-nowrap" type="button">
+<span>🚲 Bicycle parked near wall</span>
+</button>
+<button class="query-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-label-sm text-xs font-semibold hover:bg-purple-100 hover:shadow-sm transition-all whitespace-nowrap" type="button">
+<span>📱 Person holding mobile phone</span>
+</button>
+</div>
+<!-- Multi-Parameter Control Sub-Bar -->
+<div class="pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-space-md">
+<!-- Source & Mode Filters -->
+<div class="flex flex-wrap items-center gap-3">
+<!-- Source Selector -->
+<div class="flex items-center rounded-xl bg-slate-100/90 p-1 border border-slate-200/60">
+<button class="px-3 py-1.5 rounded-lg bg-white text-slate-800 font-label-sm text-xs font-bold shadow-xs">All Sources</button>
+<button class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 font-label-sm text-xs font-medium transition-colors">ESP32-CAM Streams</button>
+<button class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 font-label-sm text-xs font-medium transition-colors">Recordings (.mp4)</button>
+</div>
+<!-- Pipeline Mode Selector -->
+<div class="flex items-center rounded-xl bg-slate-100/90 p-1 border border-slate-200/60">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 text-white font-label-sm text-xs font-bold shadow-xs">
+<span class="material-symbols-outlined text-[15px]">psychology</span>
+<span>Semantic (CLIP)</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 font-label-sm text-xs font-medium transition-colors">
+<span class="material-symbols-outlined text-[15px]">filter_center_focus</span>
+<span>Class (YOLO)</span>
+</button>
+</div>
+<!-- Date Range Selector -->
+<div class="relative flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-slate-200/80 text-slate-700 font-label-sm text-xs font-semibold hover:border-slate-300 shadow-2xs transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">calendar_today</span>
+<span>Today (May 18, 2025)</span>
+<span class="material-symbols-outlined text-[14px] text-slate-400">expand_more</span>
+</div>
+</div>
+<!-- Similarity Cutoff & Category Multi-Select -->
+<div class="flex flex-wrap items-center gap-4">
+<!-- Cosine Threshold Slider -->
+<div class="flex items-center gap-2.5 bg-slate-50 border border-slate-200/70 px-3 py-1.5 rounded-xl">
+<span class="font-label-sm text-xs text-slate-500 font-bold uppercase whitespace-nowrap">SIMILARITY CUTOFF:</span>
+<input class="w-24 h-2 rounded-lg appearance-none bg-slate-200 accent-indigo-600 cursor-pointer" id="sim-slider" max="99" min="50" oninput="document.getElementById('sim-val').textContent = (this.value / 100).toFixed(2);" type="range" value="78"/>
+<span class="font-label-sm text-xs text-indigo-600 font-extrabold w-9 text-right" id="sim-val">0.78</span>
+</div>
+<!-- Categories Filter -->
+<div class="hidden lg:flex items-center gap-1.5">
+<span class="font-label-sm text-xs text-slate-400 font-bold mr-1">CLASSES:</span>
+<span class="px-2.5 py-0.5 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 font-label-sm text-xs font-bold">Person</span>
+<span class="px-2.5 py-0.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-bold">Bag/Backpack</span>
+<span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-500 hover:text-slate-800 font-label-sm text-xs font-medium cursor-pointer">+3 more</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- METRICS & SORT STRIP -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm px-1">
+<div class="flex items-center gap-2.5">
+<span class="font-headline-md text-lg text-slate-900 font-bold">18 Semantic Matches</span>
+<span class="font-label-sm text-xs text-slate-400 font-medium">for</span>
+<span class="font-label-sm text-xs text-indigo-700 font-bold px-2.5 py-1 rounded-full bg-indigo-50 border border-indigo-100">"Person carrying a red backpack"</span>
+<span class="text-slate-300 font-bold">•</span>
+<span class="font-label-sm text-xs text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> 42ms query time
+        </span>
+<span class="text-slate-300 font-bold hidden sm:inline">•</span>
+<span class="font-label-sm text-xs text-slate-500 hidden sm:inline">842k indexed frames scanned</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-xs text-slate-400 font-bold uppercase">SORT:</span>
+<button class="px-3 py-1.5 rounded-xl bg-white border border-slate-200/80 text-slate-800 font-label-sm text-xs font-bold flex items-center gap-1 shadow-2xs hover:bg-slate-50">
+<span>Highest Similarity</span>
+<span class="material-symbols-outlined text-[14px] text-indigo-600">south</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl text-slate-500 hover:text-slate-800 font-label-sm text-xs font-semibold transition-colors">Chronological</button>
+<button class="px-3 py-1.5 rounded-xl text-slate-500 hover:text-slate-800 font-label-sm text-xs font-semibold transition-colors">Source Node</button>
+</div>
+</div>
+<!-- MAIN SPLIT WORKSPACE: GALLERY GRID & DEEP INSPECTOR -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<!-- LEFT/CENTER: RESULTS GALLERY GRID (7 Columns on XL) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Match Card 01 (Active Highlighted Selection) -->
+<div class="group relative rounded-2xl bg-white p-3 border-2 border-indigo-500 shadow-md hover:shadow-xl hover:-translate-y-0.5 cursor-pointer transition-all duration-200">
+<!-- Active Indicator Pill -->
+<div class="absolute -top-3 left-4 z-30 px-3 py-0.5 rounded-full bg-gradient-to-r from-indigo-600 to-indigo-500 text-white font-label-sm text-xs font-bold flex items-center gap-1 shadow-md shadow-indigo-200">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+<span>ACTIVE INSPECTOR</span>
+</div>
+<!-- Thumbnail Container -->
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="CCTV surveillance still of a modern college technology laboratory corridor illuminated by cold blue LED ceiling fixtures. A college student walking with a distinct vibrant crimson red backpack over one shoulder, security timestamp and HUD tracking reticle overlay, surveillance perspective." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZwD9Upwhp8A6ex95uloLLo8f9BScIlfn8rMeFIvMv5JKbYfz8y1R2zGQbkR-7n9J_n6RMbNCR5D9IkPsNrJy9GWpqBO-TnWtvGw5VI63KiqvtGmWunCprXg7RgPiX_iMx8RtogfjksbnAWzzKgJv5q8TN0Ci5XFg0x2goK_WrCeGTSyjTM01gXT3pYLsy_qy9xWQohfBNU88q01lM3cG0-MR1uGWGn2n77pXfCu8"/>
+<!-- Video / Timestamp Header HUD -->
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-white/60">
+<span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-xs font-bold text-slate-800">ESP32-CAM-01</span>
+</div>
+<!-- Cosine Similarity Metric -->
+<div class="absolute top-2.5 right-2.5 bg-emerald-500 text-white font-label-sm text-xs font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md shadow-emerald-200">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+<span>94.2% MATCH</span>
+</div>
+<!-- Simulated Bounding Reticle overlay -->
+<div class="absolute inset-x-12 inset-y-6 pointer-events-none">
+<div class="w-28 h-40 ml-12 mt-2 relative border-2 border-indigo-400 rounded-lg bg-indigo-500/10">
+<div class="absolute -top-5 left-0 bg-indigo-600 text-white px-2 py-0.5 rounded font-label-sm text-[10px] font-bold shadow-xs">
+                    #104 · RED_BACKPACK
+                  </div>
+</div>
+</div>
+<!-- Bottom Timestamp Bar -->
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl font-label-sm text-xs border border-white/60 shadow-xs">
+<span class="text-slate-800 font-bold">14:28:44 UTC</span>
+<span class="text-indigo-600 font-mono font-bold">FRAME #04 · 84.2fps</span>
+</div>
+</div>
+<!-- Card Bottom Meta -->
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-sm font-bold text-slate-900">Lab North Corridor B</span>
+<span class="font-label-sm text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">Cosine Dist: 0.058</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 font-label-sm text-xs font-semibold">person: 96%</span>
+<span class="px-2 py-0.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-semibold">backpack: 92%</span>
+<span class="px-2 py-0.5 rounded-lg bg-slate-100 text-slate-600 font-label-sm text-xs font-medium">ByteTrack #104</span>
+</div>
+</div>
+</div>
+<!-- Match Card 02 -->
+<div class="group relative rounded-2xl bg-white p-3 border border-slate-200 shadow-xs hover:shadow-lg hover:border-indigo-300 hover:-translate-y-0.5 cursor-pointer transition-all duration-200">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Security camera footage of a young man carrying a dark red canvas backpack while opening an access-controlled laboratory door. High-tech university engineering department with digital signage, cool cyan and neon green indicator lights, tactical surveillance angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_5LeXS4jIAITvhMvuV1_Kyi8_O2GXvp5kH6BA2hlHGLxKfUSoyfbpMClNe6XA5zLyRRx4JU-R-InB0nB9i1lgrRDOzB5JfniEOoV_iCm4qzjzr7vHqZEf8rPUIvsT8tqoQUnW4iMF78oBs4LEoARvKdV-bf7-H87YrJAxDbnTfkWas0XBu78SV_GBQX6IB_AhuBqTwEOQd3s0avbXLSUmnIIxmaqI1BnwuvBboQk"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-white/60">
+<span class="h-2 w-2 rounded-full bg-indigo-500"></span>
+<span class="font-label-sm text-xs font-bold text-slate-800">rec_hallway_04.mp4</span>
+</div>
+<div class="absolute top-2.5 right-2.5 bg-emerald-500 text-white font-label-sm text-xs font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md shadow-emerald-200">
+<span class="material-symbols-outlined text-[14px]">stars</span>
+<span>91.8% MATCH</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl font-label-sm text-xs border border-white/60 shadow-xs">
+<span class="text-slate-800 font-bold">14:28:41 UTC</span>
+<span class="text-slate-500 font-mono font-medium">OFFSET 00:04:12</span>
+</div>
+</div>
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-sm font-bold text-slate-900">Sub-Level Lab Entryway</span>
+<span class="font-label-sm text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">Cosine Dist: 0.082</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 font-label-sm text-xs font-semibold">person: 94%</span>
+<span class="px-2 py-0.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-semibold">backpack: 89%</span>
+</div>
+</div>
+</div>
+<!-- Match Card 03 -->
+<div class="group relative rounded-2xl bg-white p-3 border border-slate-200 shadow-xs hover:shadow-lg hover:border-indigo-300 hover:-translate-y-0.5 cursor-pointer transition-all duration-200">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Wide surveillance camera shot of an outdoor campus courtyard walkway between brick computer science buildings. A pedestrian carrying a red hiking pack walking along a paved path, overcast afternoon lighting, security camera angle with subtle digital noise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj3XLaXEb8AGii4zVkNbCSRH2COqiNYRfBBjcJsA3F3fH3f6qMtP__7KesnhYmzxZSzWWMqopT0PTjIsNT6gP281NkfjjmnqqY_pMPdxbjFGG_oxOY1kGsKKzWS-K6Br4u-W88u_lnJJgREDRqYHqxRxBR-rcgkFIn-q8MhF7FGnz5QJmLa3LSEWzXLzOzXj9tKGwAVyVLK5ccDUljxdSDN6YRN-zJjXvfk-rKUo8"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-white/60">
+<span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-xs font-bold text-slate-800">ESP32-CAM-03</span>
+</div>
+<div class="absolute top-2.5 right-2.5 bg-indigo-500 text-white font-label-sm text-xs font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md shadow-indigo-200">
+<span>89.7% MATCH</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl font-label-sm text-xs border border-white/60 shadow-xs">
+<span class="text-slate-800 font-bold">14:26:19 UTC</span>
+<span class="text-slate-500 font-mono font-medium">FRAME #182</span>
+</div>
+</div>
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-sm font-bold text-slate-900">Courtyard North Gate</span>
+<span class="font-label-sm text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-md">Cosine Dist: 0.103</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 font-label-sm text-xs font-semibold">person: 91%</span>
+<span class="px-2 py-0.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-semibold">bag: 85%</span>
+</div>
+</div>
+</div>
+<!-- Match Card 04 -->
+<div class="group relative rounded-2xl bg-white p-3 border border-slate-200 shadow-xs hover:shadow-lg hover:border-indigo-300 hover:-translate-y-0.5 cursor-pointer transition-all duration-200">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Interior CCTV view of a university robotics workspace with 3D printers and soldering stations. A researcher with a red backpack slung over a chair while working at a bench, detailed computer vision surveillance angle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8FAN7HIlAfvNGNmXOmtUtVsZYSMSp0xeRInccUsLB4D-stUx78c75IfuHKaA3E7fAd2_WXUYL6OdIsvzciVuAYaGKqi7Di0Hp5-FHmHJ2Pf1SQBjui1k_BuPNAM_OQHc42HPA3J9h2Nn_vD9wobOXQIXbASebjQvX1D7hHMB3V8jXkJhOF6v73gTD1o6t2R8m7BeF3Iw9lnJ_zIxJTLWiA83mBP8gIoHg10aNK-I"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-white/60">
+<span class="h-2 w-2 rounded-full bg-slate-400"></span>
+<span class="font-label-sm text-xs font-bold text-slate-800">archive_bay2_11.mov</span>
+</div>
+<div class="absolute top-2.5 right-2.5 bg-indigo-500 text-white font-label-sm text-xs font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-md shadow-indigo-200">
+<span>86.4% MATCH</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl font-label-sm text-xs border border-white/60 shadow-xs">
+<span class="text-slate-800 font-bold">14:15:02 UTC</span>
+<span class="text-slate-500 font-mono font-medium">OFFSET 00:18:40</span>
+</div>
+</div>
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-sm font-bold text-slate-900">Hardware Assembly Bay 2</span>
+<span class="font-label-sm text-xs font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-md">Cosine Dist: 0.136</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 font-label-sm text-xs font-semibold">person: 88%</span>
+<span class="px-2 py-0.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-semibold">backpack: 84%</span>
+</div>
+</div>
+</div>
+<!-- Match Card 05 -->
+<div class="group relative rounded-2xl bg-white p-3 border border-slate-200 shadow-xs hover:shadow-lg hover:border-indigo-300 hover:-translate-y-0.5 cursor-pointer transition-all duration-200">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="CCTV security camera view of an emergency stairwell landing in a university research building. A person holding a crimson bag while descending concrete stairs, metallic handrails, institutional fluorescent lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5j9dUXC5wk393rvVWrpheVwmH2UQpCMcpRPQpzFyTK4l4IWT1DDyEsmtUwcKtrLtgrYMII-cGhkqKyTqx-VvIgbyxvoei2PUTCQnb7gTvXWFurpW7SeLKrfUKd7WQHVFtCXLSjrEJRxF-OeEKc2Cb7LawZ06XKDd4lNB10qylsMa48ml5Aww6FMbdKB67gLxgwWUbmFtCXeNFiZz3PiZfiIHnlpjWxuuXwJ4TYsc"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-white/60">
+<span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-xs font-bold text-slate-800">ESP32-CAM-02</span>
+</div>
+<div class="absolute top-2.5 right-2.5 bg-slate-700 text-white font-label-sm text-xs font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1">
+<span>83.1% MATCH</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl font-label-sm text-xs border border-white/60 shadow-xs">
+<span class="text-slate-800 font-bold">14:02:11 UTC</span>
+<span class="text-slate-500 font-mono font-medium">FRAME #412</span>
+</div>
+</div>
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-sm font-bold text-slate-900">Stairwell Tower South</span>
+<span class="font-label-sm text-xs font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">Cosine Dist: 0.169</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 font-label-sm text-xs font-semibold">person: 82%</span>
+<span class="px-2 py-0.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-semibold">bag: 79%</span>
+</div>
+</div>
+</div>
+<!-- Match Card 06 -->
+<div class="group relative rounded-2xl bg-white p-3 border border-slate-200 shadow-xs hover:shadow-lg hover:border-indigo-300 hover:-translate-y-0.5 cursor-pointer transition-all duration-200">
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Elevated CCTV feed overlooking a computer science study lounge with glass whiteboards. A student slinging a red daypack onto their back before standing up, subtle tracking reticles and security UI parameters visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGfDX6q8_aDTC0BolBgof-i7JVHahYoOIghqcyfhX3OETxGVrpmoox2Of_9dkwFQBDrOg6IuswENK91oGn_GbPEzSLSwfHJQgCvbNJyalMKFQs6XXA14lD8Zi-uJV27EdHMZbEahiqxqjGQVAas6t10h6l3efOsrAzT2nJwdUYQ5w6jrt11J17e0Ca88XB8-6bASuPA8RWfeDSgbuS7NkpOvom-aheTeKNUZ_4SlU"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-white/60">
+<span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+<span class="font-label-sm text-xs font-bold text-slate-800">ESP32-CAM-01</span>
+</div>
+<div class="absolute top-2.5 right-2.5 bg-slate-700 text-white font-label-sm text-xs font-extrabold px-2.5 py-1 rounded-full flex items-center gap-1">
+<span>80.5% MATCH</span>
+</div>
+<div class="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between bg-white/90 backdrop-blur-md px-3 py-1 rounded-xl font-label-sm text-xs border border-white/60 shadow-xs">
+<span class="text-slate-800 font-bold">13:58:20 UTC</span>
+<span class="text-slate-500 font-mono font-medium">FRAME #09</span>
+</div>
+</div>
+<div class="mt-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-sm font-bold text-slate-900">Student Commons Area</span>
+<span class="font-label-sm text-xs font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-md">Cosine Dist: 0.195</span>
+</div>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 font-label-sm text-xs font-semibold">person: 85%</span>
+<span class="px-2 py-0.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 font-label-sm text-xs font-semibold">backpack: 76%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination / Stream More Frames -->
+<div class="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-xs flex items-center justify-between">
+<span class="font-label-sm text-xs text-slate-500 font-medium">Showing matches <strong class="text-slate-800">1 - 6</strong> of 18 total</span>
+<div class="flex items-center gap-1.5">
+<button class="h-8 w-8 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-400 disabled:opacity-40 flex items-center justify-center transition-colors" disabled="">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<button class="h-8 px-3 rounded-xl bg-indigo-600 text-white font-label-sm text-xs font-bold shadow-xs">1</button>
+<button class="h-8 px-3 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-label-sm text-xs font-bold transition-colors">2</button>
+<button class="h-8 px-3 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 font-label-sm text-xs font-bold transition-colors">3</button>
+<button class="h-8 w-8 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-700 flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: DEEP DETAILED RESULT INSPECTOR (5 Columns on XL, Sticky HUD) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md sticky top-20">
+<div class="rounded-2xl bg-white p-space-lg border border-slate-200/90 shadow-[0_10px_35px_rgba(70,72,212,0.06)] flex flex-col gap-4">
+<!-- Inspector Header -->
+<div class="flex items-center justify-between pb-1 border-b border-slate-100">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[19px]">troubleshoot</span>
+</span>
+<span class="font-headline-md text-base font-bold text-slate-900">Target Inspection</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-xs font-bold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-full font-mono">FRAME_04</span>
+<span class="font-label-sm text-[11px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full font-mono">ESP32_STREAM</span>
+</div>
+</div>
+<!-- High-Res Interactive Viewport with HUD Overlays -->
+<div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-900 shadow-md">
+<img class="w-full h-full object-cover" data-alt="Ultra high-definition video surveillance frame showing a medium close-up of a student in a university hallway holding a red canvas backpack. The frame has professional tactical HUD green and cyan telemetry overlays, focal crosshairs, and tight vector bounding box." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAewCks1uTquWDCC_NvwTHy9RDv6jYp02gptLrzeagj-c5GHajf5xEkL6aW_-kovBfCa6KGgg2oFX5rpwMsCdDQ0ph8ihxb4tOjkVEL3-f5OyZxAEd_Q0qPDNcWjLAuiSeDRhi1njpBlbIEH1BTf6cZEEoeuIZBQOLtIjRNyUmXyleZBn9ohfxol1DC5e-5JJWjb9SueOQzcI_NkDnZ16lBwA4-1v4jgR43FD_5aUY"/>
+<!-- Corner Telemetry Overlay -->
+<div class="absolute top-2.5 left-2.5 flex flex-col font-mono text-[10px] text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1.5 rounded-lg border border-white/10 pointer-events-none shadow-sm">
+<span class="text-indigo-300 font-bold">LAT: 14.28.44.102</span>
+<span>NODE: ESP32-CAM-01 [192.168.1.144]</span>
+<span class="text-emerald-400">RES: 1920x1080 @ 30FPS</span>
+</div>
+<!-- Target Bounding Box Reticle -->
+<div class="absolute left-[38%] top-[22%] w-[34%] h-[68%] pointer-events-none">
+<!-- Bounding Corner Accents -->
+<div class="absolute -top-1 -left-1 w-3.5 h-3.5 border-t-2 border-l-2 border-indigo-400"></div>
+<div class="absolute -top-1 -right-1 w-3.5 h-3.5 border-t-2 border-r-2 border-indigo-400"></div>
+<div class="absolute -bottom-1 -left-1 w-3.5 h-3.5 border-b-2 border-l-2 border-indigo-400"></div>
+<div class="absolute -bottom-1 -right-1 w-3.5 h-3.5 border-b-2 border-r-2 border-indigo-400"></div>
+<!-- Floating Vector Header -->
+<div class="absolute -top-6 left-0 bg-indigo-600 text-white font-mono text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 shadow-md shadow-indigo-500/30">
+<span>TARGET #104</span>
+<span class="text-emerald-300">· 94.2%</span>
+</div>
+</div>
+<!-- Playhead Overlay Control -->
+<div class="absolute bottom-2.5 left-2.5 right-2.5 bg-slate-900/85 backdrop-blur-md rounded-xl p-2 flex flex-col gap-1.5 border border-white/10">
+<div class="flex items-center justify-between text-[11px] font-mono">
+<span class="text-emerald-400 font-bold flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  SURROUNDING CLIP (00:30 BUFFER)
+                </span>
+<span class="text-white font-bold">00:14 / 00:30</span>
+</div>
+<div class="relative w-full h-2 bg-white/20 rounded-full cursor-pointer">
+<div class="h-full bg-gradient-to-r from-indigo-500 to-emerald-400 rounded-full w-[48%]"></div>
+<div class="absolute top-1/2 left-[48%] -translate-x-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-white shadow-md border-2 border-indigo-600"></div>
+</div>
+</div>
+</div>
+<!-- Visual Match Density Timeline Bar -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between font-label-sm text-xs">
+<span class="text-slate-500 font-bold uppercase">STREAM TIMELINE MATCH OCCURRENCES:</span>
+<span class="text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md font-mono font-bold">4 Match Spikes</span>
+</div>
+<!-- Timeline Bar visualization -->
+<div class="relative w-full h-8 rounded-xl bg-slate-100/90 border border-slate-200/80 overflow-hidden flex items-center px-1">
+<div class="absolute inset-0 flex justify-between px-3 text-[10px] font-mono text-slate-400 font-semibold items-center pointer-events-none">
+<span>14:00</span>
+<span>14:15</span>
+<span>14:30</span>
+<span>14:45</span>
+</div>
+<!-- Timeline Match Highlights -->
+<div class="absolute left-[24%] w-2 h-5 bg-indigo-400 rounded-md" title="Match at 14:15"></div>
+<div class="absolute left-[54%] w-1.5 h-4 bg-indigo-300 rounded-md" title="Match at 14:26"></div>
+<div class="absolute left-[58%] w-2.5 h-6 bg-emerald-500 rounded-md shadow-[0_0_8px_rgba(16,185,129,0.5)]" title="Peak Match at 14:28 (Current)"></div>
+<div class="absolute left-[62%] w-2 h-4.5 bg-indigo-400 rounded-md" title="Match at 14:29"></div>
+</div>
+</div>
+<!-- Matching Moment Metadata & Frame Stepper -->
+<div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-slate-400 font-bold uppercase">MATCHING TIMESTAMP</span>
+<span class="font-headline-md text-base text-slate-900 font-extrabold font-mono">14:28:44.102 UTC</span>
+</div>
+<button class="px-3 py-1.5 rounded-xl bg-white hover:bg-indigo-50 border border-slate-200 hover:border-indigo-200 text-indigo-600 font-label-sm text-xs font-bold flex items-center gap-1.5 shadow-2xs transition-all">
+<span class="material-symbols-outlined text-[17px]">play_circle</span>
+<span>Jump in Full Rec</span>
+</button>
+</div>
+<!-- Frame Steppers -->
+<div class="grid grid-cols-2 gap-2 pt-0.5">
+<button class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-200/80 text-slate-700 font-label-sm text-xs font-semibold shadow-2xs transition-colors">
+<span class="material-symbols-outlined text-[16px] text-slate-400">arrow_back</span>
+<span>Prev Frame (14:28:41)</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-200/80 text-slate-700 font-label-sm text-xs font-semibold shadow-2xs transition-colors">
+<span>Next Frame (14:28:47)</span>
+<span class="material-symbols-outlined text-[16px] text-slate-400">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Vector Alignment Telemetry (ChromaDB & CLIP) -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-xs text-slate-400 font-bold uppercase tracking-wider">Neural Embedding Telemetry</span>
+<div class="grid grid-cols-3 gap-2">
+<div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
+<span class="font-label-sm text-[10px] text-slate-400 font-bold uppercase">CLIP MATCH</span>
+<span class="font-label-lg text-base text-emerald-600 font-extrabold">0.942</span>
+</div>
+<div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
+<span class="font-label-sm text-[10px] text-slate-400 font-bold uppercase">COSINE DIST</span>
+<span class="font-label-lg text-base text-indigo-600 font-extrabold">0.058</span>
+</div>
+<div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 flex flex-col">
+<span class="font-label-sm text-[10px] text-slate-400 font-bold uppercase">VECTOR ID</span>
+<span class="font-label-lg text-base text-amber-700 font-extrabold truncate">#vec_8492</span>
+</div>
+</div>
+<!-- ChromaDB Cosine Visual Bar -->
+<div class="mt-1 flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-xs">
+<span class="text-slate-500 font-medium">Text-to-Frame Embedding Similarity:</span>
+<span class="text-indigo-600 font-mono font-bold">94.2% [High Confidence]</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-slate-100 border border-slate-200/60 overflow-hidden">
+<div class="h-full bg-gradient-to-r from-indigo-500 via-sky-400 to-emerald-400 rounded-full" style="width: 94.2%;"></div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 h-11 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-headline-md text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-indigo-200 transition-colors">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export High-Res Frame</span>
+</button>
+<button class="h-11 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-label-md text-xs font-bold flex items-center justify-center gap-1.5 transition-colors border border-slate-200">
+<span class="material-symbols-outlined text-[18px] text-slate-600">movie_filter</span>
+<span>Extract Clip (10s)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple Pill Selection Interaction for Interactive Demo
+  document.querySelectorAll('.query-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.query-pill').forEach(p => {
+        p.classList.remove('bg-rose-50', 'border-rose-200', 'text-rose-700');
+        p.classList.add('bg-slate-50', 'border-slate-200', 'text-slate-600');
+      });
+      this.classList.remove('bg-slate-50', 'border-slate-200', 'text-slate-600');
+      this.classList.add('bg-rose-50', 'border-rose-200', 'text-rose-700');
+      
+      const text = this.querySelector('span:not(.material-symbols-outlined)') ? this.querySelector('span:not(.material-symbols-outlined)').innerText : this.innerText;
+      const cleanText = text.replace(/^[^\w\s]+/, '').trim();
+      const input = document.getElementById('vector-search-input');
+      if (input) {
+        input.value = cleanText;
+      }
+    });
+  });
+
+  // Hotkey ⌘+Enter Support
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+      const btn = document.getElementById('run-search-btn');
+      if (btn) {
+        btn.classList.add('scale-95');
+        setTimeout(() => btn.classList.remove('scale-95'), 150);
+      }
+    }
+  });
+</script></main></div></body></html>

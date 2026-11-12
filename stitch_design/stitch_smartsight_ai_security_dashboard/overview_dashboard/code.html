@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "outline": "#64748b",
+          "error-container": "#ffe4e6",
+          "secondary-fixed-dim": "#a7f3d0",
+          "tertiary-container": "#fef3c7",
+          "primary-container": "#4f46e5",
+          "tertiary-fixed-dim": "#fde68a",
+          "surface-container-low": "#f8fafc",
+          "primary-fixed": "#e0e7ff",
+          "secondary": "#059669",
+          "surface-container": "#f1f5f9",
+          "on-surface": "#0f172a",
+          "surface-tint": "#4f46e5",
+          "surface": "#f8f9ff",
+          "on-surface-variant": "#475569",
+          "surface-bright": "#ffffff",
+          "background": "#f8f9ff",
+          "on-primary": "#ffffff",
+          "surface-container-lowest": "#ffffff",
+          "surface-dim": "#e2e8f0",
+          "tertiary": "#d97706",
+          "surface-container-highest": "#e2e8f0",
+          "outline-variant": "#cbd5e1",
+          "on-background": "#0f172a",
+          "on-primary-container": "#ffffff",
+          "secondary-container": "#d1fae5",
+          "primary": "#4f46e5",
+          "error": "#e11d48",
+          "on-error": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.5rem",
+          "lg": "0.75rem",
+          "xl": "1rem",
+          "2xl": "1.25rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-md": "1.25rem",
+          "space-xs": "0.25rem",
+          "gutter": "1rem",
+          "space-lg": "1.25rem",
+          "margin": "1rem",
+          "space-sm": "0.5rem",
+          "space-md": "0.875rem",
+          "margin-lg": "2rem",
+          "space-xl": "1.5rem"
+        },
+        "fontFamily": {
+          "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-xl": ["Plus Jakarta Sans", "sans-serif"],
+          "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "body-md": ["Plus Jakarta Sans", "sans-serif"],
+          "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "label-sm": ["Space Grotesk", "sans-serif"],
+          "label-md": ["Space Grotesk", "sans-serif"],
+          "label-lg": ["Space Grotesk", "sans-serif"]
+        }
+      }
+    }
+  };
+</script></head><body class="bg-[#f8f9ff] font-body-md text-slate-800 antialiased selection:bg-indigo-100 selection:text-indigo-900"><aside class="fixed left-0 top-0 h-full w-72 bg-white z-50 flex flex-col justify-between border-r border-slate-100 shadow-[2px_0_20px_rgba(79,70,229,0.03)]"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center justify-between border-b border-slate-100/80 bg-gradient-to-r from-indigo-50/40 via-white to-white"><div class="flex items-center gap-space-sm"><div class="h-10 w-10 rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-400 p-0.5 shadow-md shadow-indigo-200/50 flex items-center justify-center text-white"><span class="material-symbols-outlined text-[24px]">visibility</span></div><div class="flex flex-col"><span class="font-headline-md text-slate-900 font-extrabold tracking-tight text-[17px] flex items-center gap-1.5">SmartSight <span class="bg-indigo-100 text-indigo-600 text-[10px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wider">AI</span></span><span class="font-label-sm text-[10px] text-slate-400 font-semibold tracking-wider uppercase">Vision Core Labs</span></div></div><div class="h-2.5 w-2.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse ring-4 ring-emerald-50"></div></div><div class="px-space-md pt-5 pb-2"><span class="font-label-sm text-[11px] font-bold text-slate-400 uppercase tracking-widest px-2">Navigation</span></div><nav class="flex flex-col gap-1.5 px-space-md"><a aria-current="page" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium transition-all bg-indigo-600 text-white shadow-sm shadow-indigo-300/40" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-semibold text-sm">Overview</span></a><a class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-indigo-600 transition-all text-sm group" data-path="live-camera" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-indigo-600 transition-colors">videocam</span><span>Live Camera</span></div><span class="flex items-center gap-1.5 font-label-sm text-[11px] font-bold text-rose-600 bg-rose-50 border border-rose-200/60 px-2 py-0.5 rounded-full"><span class="h-1.5 w-1.5 rounded-full bg-rose-500 animate-ping"></span>LIVE</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-indigo-600 transition-all text-sm group" data-path="smart-search" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-indigo-600 transition-colors">saved_search</span><span>Smart Search</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-indigo-600 transition-all text-sm group" data-path="recordings" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-indigo-600 transition-colors">video_library</span><span>Recordings</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-indigo-600 transition-all text-sm group" data-path="detection-activity" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-indigo-600 transition-colors">center_focus_strong</span><span>Detection Activity</span></a><a class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-medium text-slate-600 hover:bg-slate-50 hover:text-indigo-600 transition-all text-sm group" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px] text-slate-400 group-hover:text-indigo-600 transition-colors">tune</span><span>Settings</span></a></nav></div><div class="p-4 m-3 rounded-2xl bg-gradient-to-br from-indigo-50/70 via-slate-50 to-pink-50/50 border border-indigo-100/70 flex flex-col gap-2.5 shadow-sm"><div class="flex items-center justify-between p-2 rounded-xl bg-white shadow-xs border border-slate-100"><div class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500 shadow-sm shadow-emerald-400"></span><span class="font-label-sm text-xs font-bold text-slate-800">ESP32-CAM Node</span></div><span class="font-label-sm text-[11px] font-bold text-emerald-700 bg-emerald-100/60 px-2 py-0.5 rounded-full">ACTIVE</span></div><div class="font-label-sm text-slate-500 px-1 select-all text-[11px] font-mono break-all flex items-center gap-1.5"><span class="material-symbols-outlined text-[13px] text-indigo-400">wifi</span>192.168.1.144:81</div><div class="flex flex-wrap gap-1.5 pt-1"><span class="font-label-sm text-[11px] font-semibold text-indigo-700 bg-indigo-100/80 px-2 py-0.5 rounded-md">YOLOv8</span><span class="font-label-sm text-[11px] font-semibold text-cyan-700 bg-cyan-100/80 px-2 py-0.5 rounded-md">ByteTrack</span><span class="font-label-sm text-[11px] font-semibold text-amber-700 bg-amber-100/80 px-2 py-0.5 rounded-md">CLIP ViT</span><span class="font-label-sm text-[11px] font-semibold text-emerald-700 bg-emerald-100/80 px-2 py-0.5 rounded-md">ChromaDB</span></div><div class="pt-1 border-t border-slate-200/50 flex items-center justify-between text-slate-400 font-label-sm text-[11px]"><span>v2.4.0 • Core</span><span class="font-medium text-slate-500">College CV Lab</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-white/90 backdrop-blur-md z-40 flex items-center justify-between px-space-lg border-b border-slate-100 shadow-[0_2px_15px_rgba(79,70,229,0.02)]"><div class="flex items-center gap-space-sm"><div class="h-9 w-9 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold shadow-xs"><span class="material-symbols-outlined text-[20px]">hub</span></div><span class="font-label-md text-xs font-bold text-slate-400 uppercase tracking-wider">Node Cluster</span><span class="text-slate-300 font-semibold">/</span><span class="font-headline-md text-sm font-bold text-slate-800 tracking-tight">Main Campus Entrance &amp; Atrium</span><span class="bg-indigo-50 text-indigo-700 font-label-sm text-xs font-semibold px-2 py-0.5 rounded-full border border-indigo-100">ESP32-REV3</span></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-2"><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200/60 shadow-xs"><span class="font-label-sm text-xs text-slate-400 font-semibold">FPS:</span><span class="font-label-sm text-xs text-emerald-600 font-bold">28.5</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200/60 shadow-xs"><span class="font-label-sm text-xs text-slate-400 font-semibold">AI LATENCY:</span><span class="font-label-sm text-xs text-indigo-600 font-bold">18.2ms</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200/60 shadow-xs"><span class="font-label-sm text-xs text-slate-400 font-semibold">STREAM:</span><span class="font-label-sm text-xs text-slate-700 font-bold">1080p · H.264</span></div></div><div class="flex items-center gap-2"><button class="h-9 px-3 rounded-xl bg-slate-50 hover:bg-indigo-50 hover:text-indigo-600 text-slate-600 border border-slate-200/60 shadow-xs transition-all flex items-center gap-1.5 font-label-sm text-xs font-semibold" title="Capture Snapshot" type="button"><span class="material-symbols-outlined text-[18px]">photo_camera</span><span class="hidden sm:inline">Snapshot</span></button><button class="h-9 w-9 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200/60 shadow-xs transition-all flex items-center justify-center" title="Mute Stream Audio" type="button"><span class="material-symbols-outlined text-[18px]">volume_off</span></button><button class="h-9 px-3.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200/60 shadow-xs transition-all flex items-center gap-1.5 font-label-sm text-xs font-bold" title="Emergency Threat Flag" type="button"><span class="material-symbols-outlined text-[18px] text-rose-500">notification_important</span><span class="hidden sm:inline">Alert Flag</span></button></div><div class="flex items-center gap-3 pl-3 border-l border-slate-200/60"><div class="hidden md:flex flex-col items-end"><span class="font-body-md text-sm font-bold text-slate-800 leading-tight">Engineer Alex M.</span><span class="font-label-sm text-[11px] font-semibold text-emerald-600">Admin Authorized</span></div><div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-indigo-500 to-purple-500 p-0.5 shadow-md shadow-indigo-100"><img alt="Alex Avatar" class="w-full h-full rounded-[14px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlzx4mZW9WHHeGxEgL_OlcvtSyqwpD5WtEdRrRkAc5Hcyv8oz36EV1TjhhlwB7JF-O3rDTi41kx1Ggeq-2AhgE8xA112KQr3S68dHdWo4ZIn5XIKalCI59-AQ9Bd8-iArWhAPmn1AHxJQgTSFBV-HMHgYCJogzjU5SubVgNQTZPatOEhw0csnlx8Toful9Rm7X-k6nbzvkRWbKHeL2FknjW1fjhkiOkvsSEk0cgMs"/></div></div></div></header><main class="relative pt-20 bg-[#f8f9ff] min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-Header / Tactical Location Breadcrumb Bar -->
+<div class="px-space-lg py-3 bg-white/70 backdrop-blur-sm border-b border-slate-100 flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 font-label-sm text-xs font-bold shadow-xs">
+<span class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        STREAM ENGINE ACTIVE
+      </span>
+<span class="text-slate-300 font-semibold">/</span>
+<span class="text-slate-700 font-semibold text-xs tracking-wide flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-indigo-500">apartment</span>CAMPUS_NORTH_QUAD // CORE_LAB_LOBBY</span>
+<span class="text-slate-300 font-semibold">/</span>
+<span class="text-indigo-600 font-label-sm text-xs font-bold bg-indigo-50/80 px-2 py-0.5 rounded-md">ESP32_DEV_MODULE_REV3</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 text-slate-500 font-label-sm text-xs font-medium bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-100">
+<span class="material-symbols-outlined text-[16px] text-emerald-500">wifi</span>
+<span>Signal: <strong class="text-slate-700 font-semibold">-58 dBm</strong></span>
+</div>
+<div class="flex items-center gap-1.5 text-slate-500 font-label-sm text-xs font-medium bg-slate-50 px-2.5 py-1 rounded-lg border border-slate-100">
+<span class="material-symbols-outlined text-[16px] text-indigo-500">memory</span>
+<span>DMA Buffer: <strong class="text-slate-700 font-semibold">98.4%</strong></span>
+</div>
+<span class="font-label-sm text-xs text-slate-400 font-semibold">UPTIME: 14h 22m 18s</span>
+</div>
+</div>
+<div class="p-space-lg flex flex-col gap-space-lg">
+<!-- Top KPI Summary Strip -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Card 1: Camera Node Telemetry -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200/70 shadow-sm shadow-indigo-100/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md hover:border-indigo-200 transition-all">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="h-2.5 w-2.5 rounded-full bg-emerald-500 shadow-sm shadow-emerald-300"></span>
+<span class="font-label-sm text-xs font-bold text-slate-700 uppercase tracking-wider">Node-01 ESP32</span>
+</div>
+<span class="font-label-sm text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full font-bold">ONLINE</span>
+</div>
+<div class="mt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-3xl font-extrabold text-slate-900 tracking-tight">28.5</span>
+<span class="font-label-sm text-xs text-slate-400 font-bold uppercase">FPS</span>
+</div>
+<p class="font-label-sm text-xs text-slate-500 mt-1 font-mono">192.168.1.144:81 · 2.4Mbps</p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+<span class="text-slate-400 font-medium">Signal -58 dBm</span>
+<span class="text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded-full text-[11px]">Optimal Link</span>
+</div>
+</div>
+<!-- Card 2: Neural Inference Engine -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200/70 shadow-sm shadow-indigo-100/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md hover:border-indigo-200 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-xs font-bold text-slate-700 uppercase tracking-wider">Inference Pipeline</span>
+<div class="w-7 h-7 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">psychology</span></div>
+</div>
+<div class="mt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-3xl font-extrabold text-indigo-600 tracking-tight">YOLOv8s</span>
+</div>
+<p class="font-label-sm text-xs text-slate-500 mt-1 font-medium">+ ByteTrack v2.1 Engaged</p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+<span class="text-slate-400 font-medium">Loop Latency</span>
+<span class="text-indigo-600 font-bold bg-indigo-50 px-2 py-0.5 rounded-full text-[11px]">18.2ms avg</span>
+</div>
+</div>
+<!-- Card 3: Frames Analyzed -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200/70 shadow-sm shadow-indigo-100/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md hover:border-indigo-200 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-xs font-bold text-slate-700 uppercase tracking-wider">Frames Analyzed</span>
+<div class="w-7 h-7 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">motion_photos_on</span></div>
+</div>
+<div class="mt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-3xl font-extrabold text-slate-900 tracking-tight" id="frames-counter">1,489,204</span>
+</div>
+<p class="font-label-sm text-xs text-emerald-600 mt-1 flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+1,710 / min live</span>
+</p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+<span class="text-slate-400 font-medium">Dropped Frames</span>
+<span class="text-slate-700 font-bold bg-slate-100 px-2 py-0.5 rounded-full text-[11px]">0.002%</span>
+</div>
+</div>
+<!-- Card 4: Daily Detection Aggregate -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200/70 shadow-sm shadow-indigo-100/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md hover:border-indigo-200 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-xs font-bold text-slate-700 uppercase tracking-wider">Objects Today</span>
+<span class="font-label-sm text-[11px] text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full font-bold">Active</span>
+</div>
+<div class="mt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-3xl font-extrabold text-slate-900 tracking-tight">3,842</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<div class="h-2 flex-1 bg-slate-100 rounded-full overflow-hidden flex gap-0.5">
+<div class="bg-indigo-500 h-full rounded-full" style="width: 55%" title="Persons: 2,110"></div>
+<div class="bg-amber-400 h-full rounded-full" style="width: 30%" title="Vehicles: 1,172"></div>
+<div class="bg-emerald-400 h-full rounded-full" style="width: 11%" title="Backpacks: 418"></div>
+<div class="bg-rose-400 h-full rounded-full" style="width: 4%" title="Bicycles: 142"></div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between font-label-sm text-slate-500 text-[11px] font-medium">
+<span class="flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-indigo-500"></span>2.1k Persons</span>
+<span class="flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-amber-400"></span>1.1k Cars</span>
+<span class="flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-emerald-400"></span>418 Bags</span>
+</div>
+</div>
+<!-- Card 5: Semantic Vectors Indexed -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200/70 shadow-sm shadow-indigo-100/30 flex flex-col justify-between relative overflow-hidden group hover:shadow-md hover:border-indigo-200 transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-xs font-bold text-slate-700 uppercase tracking-wider">Vector Memory</span>
+<div class="w-7 h-7 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center"><span class="material-symbols-outlined text-[18px]">hub</span></div>
+</div>
+<div class="mt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl text-3xl font-extrabold text-sky-600 tracking-tight">842,100</span>
+</div>
+<p class="font-label-sm text-xs text-slate-500 mt-1 font-medium">CLIP Embeddings stored</p>
+</div>
+<div class="mt-4 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+<span class="text-slate-400 font-medium">ChromaDB Store</span>
+<span class="text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-full text-[11px]">48 Clips Ready</span>
+</div>
+</div>
+</section>
+<!-- Center Main Section (2-Column Grid / 7:5 ratio) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Camera Viewport HUD (7 Cols in xl) -->
+<section class="xl:col-span-7 flex flex-col gap-4">
+<!-- Live Viewport Card -->
+<div class="bg-white rounded-3xl overflow-hidden shadow-sm shadow-indigo-100/50 border border-slate-200/80 flex flex-col">
+<!-- Viewport Header Toolbar -->
+<div class="px-5 py-3.5 bg-gradient-to-r from-slate-50 via-white to-indigo-50/40 border-b border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="h-3 w-3 rounded-full bg-emerald-500 shadow-sm shadow-emerald-400 animate-pulse ring-4 ring-emerald-50"></span>
+<span class="font-headline-md text-sm font-bold text-slate-800 tracking-wide">FEED_01 • ESP32-CAM [Main Lobby]</span>
+<span class="font-label-sm text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-100">Preset: Wide 120°</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full font-bold flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>REALTIME RTSP</span>
+<button class="p-1.5 rounded-xl text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 transition-all" title="View Source Raw" type="button">
+<span class="material-symbols-outlined text-[18px]">settings_ethernet</span>
+</button>
+</div>
+</div>
+<!-- Video Stream Simulation Canvas -->
+<div class="relative w-full aspect-[16/10] bg-slate-900 overflow-hidden select-none">
+<!-- Simulated CCTV Feed Background Scene -->
+<div class="w-full h-full bg-cover bg-center filter brightness-[0.98] contrast-[1.05]" data-alt="Security surveillance camera perspective view of a sleek, modern university computer engineering building interior corridor and atrium. Concrete polished floors reflecting fluorescent cool lights, geometric architectural glass panels, contemporary tech laboratory entrance in background, cinematic dark mood, subtle surveillance grain overlay, blue teal tint." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGgoQC-fOjoBdKdWJ_CYBJGU02EgSIazubhc_ZHG7Kh95rnfgyWWeJi5hM26DHujCaGTVoT8hyPNxEBSGMUk9JAexZOvprZrzoay-QVOyLN91aIGuGsiVuo12MenoieJgiLdRd1mlvEDrmL1kkX3G3eF575lMomkSKUK4KjZhHV-pYBKwG0ePEmBBja9MFaUGPQ2-HpqiGbTo1MriDBLThkpocgiiPpBcr4WcRvo4')">
+</div>
+<!-- Soft Vignette Gradients -->
+<div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-slate-900/40 via-transparent to-slate-900/20"></div>
+<!-- Viewport Internal Reticles & Crosshairs -->
+<div class="absolute inset-4 pointer-events-none flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<!-- Top-Left Telemetry Tag -->
+<div class="bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-lg border border-white/60 flex flex-col gap-0.5 text-[11px] font-label-sm text-slate-600">
+<div class="flex items-center gap-2 font-bold text-slate-800">
+<span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-emerald-500"></span>ESP32_MAIN_QUAD_01</span>
+<span class="text-slate-300">|</span>
+<span class="text-indigo-600 font-semibold" id="hud-timestamp">2025-05-18 14:32:08 UTC</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 pt-0.5">
+<span>Bitrate: <strong class="text-slate-700">2.4 Mbps</strong></span>
+<span>•</span>
+<span>FPS: <strong class="text-emerald-600 font-bold">28.5</strong></span>
+<span>•</span>
+<span>1080p @ 30fps</span>
+</div>
+</div>
+<!-- Top-Right Status Badge -->
+<div class="bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-lg border border-white/60 flex items-center gap-2 font-label-sm text-xs font-bold text-rose-600">
+<span class="h-2 w-2 rounded-full bg-rose-500 animate-ping"></span>
+<span>REC • CHROMA ACTIVE</span>
+</div>
+</div>
+<!-- Center Reticle Graphic (Friendly Precision Alignment) -->
+<div class="self-center flex items-center justify-center opacity-40">
+<svg class="text-white drop-shadow-md" fill="none" height="48" viewbox="0 0 48 48" width="48">
+<circle cx="24" cy="24" r="14" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></circle>
+<path d="M24 6V14M24 34V42M6 24H14M34 24H42" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex justify-between items-end">
+<div class="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-lg border border-white/60 font-label-sm text-[11px] text-slate-600 font-semibold flex items-center gap-2.5">
+<span class="text-indigo-600 font-bold">LENS 120° FOV</span>
+<span class="text-slate-300">|</span>
+<span>SHUTTER 1/60</span>
+<span class="text-slate-300">|</span>
+<span>ISO 400</span>
+</div>
+<div class="bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-lg border border-white/60 font-label-sm text-[11px] text-slate-700 font-bold flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+<span>2 TRACKLETS ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- YOLO BOUNDING BOX #1: PERSON (Playful Indigo / Violet styling) -->
+<div class="absolute left-[38%] top-[22%] w-[26%] h-[64%] pointer-events-none group">
+<!-- Trajectory trail motion dots -->
+<div class="absolute -left-12 bottom-6 flex items-center gap-1.5 opacity-90">
+<span class="h-1.5 w-1.5 rounded-full bg-indigo-300"></span>
+<span class="h-2 w-2 rounded-full bg-indigo-400"></span>
+<span class="h-2.5 w-2.5 rounded-full bg-indigo-600 shadow-md shadow-indigo-400"></span>
+<svg class="text-indigo-500 drop-shadow" height="12" viewbox="0 0 24 12" width="24">
+<path d="M0 6H20M20 6L15 1M20 6L15 11" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Friendly Playful Frame with Rounded Pill Corners -->
+<div class="w-full h-full relative rounded-2xl border-2 border-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.35)] bg-indigo-500/10 backdrop-blur-[1px]">
+<!-- Friendly Pill Label Top Left -->
+<div class="absolute -top-4 left-2 bg-indigo-600 text-white px-2.5 py-1 rounded-full shadow-md flex items-center gap-1.5 whitespace-nowrap">
+<span class="material-symbols-outlined text-[14px]">person</span>
+<span class="font-headline-md text-xs font-bold">Person #TRK-1042</span>
+<span class="bg-white/20 text-white px-1.5 py-0.2 rounded-full text-[10px] font-bold">94%</span>
+</div>
+<!-- Live Centroid Target Indicator -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-indigo-500 ring-4 ring-white shadow-md"></div>
+</div>
+</div>
+<!-- YOLO BOUNDING BOX #2: BACKPACK (Playful Rose / Pink styling) -->
+<div class="absolute left-[47%] top-[42%] w-[13%] h-[24%] pointer-events-none">
+<div class="w-full h-full relative rounded-xl border-2 border-rose-500 shadow-[0_0_15px_rgba(244,63,94,0.3)] bg-rose-500/10">
+<!-- Pill Label Bottom -->
+<div class="absolute -bottom-4 left-1 bg-rose-600 text-white px-2.5 py-0.5 rounded-full shadow-md flex items-center gap-1 whitespace-nowrap">
+<span class="material-symbols-outlined text-[13px]">backpack</span>
+<span class="font-headline-md text-[11px] font-bold">Red Backpack</span>
+<span class="bg-white/20 text-white px-1 rounded-full text-[9px] font-bold">89%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Viewport Floating Controls Bar -->
+<div class="p-3 bg-white border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<!-- Start / Stop Monitoring Button -->
+<button class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-headline-md text-xs font-bold flex items-center gap-1.5 active:scale-95 transition-all shadow-sm shadow-indigo-300/40" id="toggle-monitor-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">pause</span>
+<span>Pause Stream</span>
+</button>
+<!-- Snapshot Capture -->
+<button class="px-3.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 font-label-md text-xs font-bold flex items-center gap-1.5 border border-slate-200/60 transition-all" title="Capture Still Frame" type="button">
+<span class="material-symbols-outlined text-[18px] text-indigo-600">camera</span>
+<span class="hidden sm:inline">Snapshot</span>
+</button>
+<!-- Audio Feed Toggle -->
+<button class="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-500 hover:text-slate-800 border border-slate-200/60 transition-all flex items-center justify-center" id="toggle-audio-btn" title="Toggle Hardware Mic" type="button">
+<span class="material-symbols-outlined text-[18px]">mic_off</span>
+</button>
+<!-- Detection Overlay Toggle Switch -->
+<button class="px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200/60 flex items-center gap-1.5 font-label-sm text-xs font-bold transition-all" id="toggle-overlay-btn" title="Toggle Neural HUD Overlays" type="button">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">layers</span>
+<span class="hidden md:inline">Overlays: ON</span>
+</button>
+</div>
+<!-- Preset / Digital PTZ Selectors & Fullscreen -->
+<div class="flex items-center gap-2">
+<div class="flex items-center bg-slate-100 p-1 rounded-xl gap-0.5">
+<button class="px-2.5 py-1 rounded-lg text-indigo-700 font-bold text-xs bg-white shadow-xs" type="button">Wide</button>
+<button class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-indigo-600 font-semibold text-xs transition-all" type="button">Zoom 2x</button>
+<button class="px-2.5 py-1 rounded-lg text-slate-600 hover:text-indigo-600 font-semibold text-xs transition-all" type="button">Door</button>
+</div>
+<button class="p-2 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200/60 transition-all" title="Toggle Fullscreen" type="button">
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Camera Network Diagnostics Strip -->
+<div class="bg-white p-3.5 rounded-2xl border border-slate-200/70 shadow-sm shadow-indigo-100/20 flex flex-wrap items-center justify-between text-slate-600 font-label-sm text-xs gap-2">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1.5 text-slate-800 font-bold"><span class="material-symbols-outlined text-[18px] text-indigo-600">router</span>ESP32-WROVER-E</span>
+<span class="text-slate-300">•</span>
+<span>Flash: 4MB QSPI</span>
+<span class="text-slate-300">•</span>
+<span>PSRAM: 8MB Active</span>
+</div>
+<div class="flex items-center gap-3">
+<span>Encoder: JPEG HTTP Stream</span>
+<span class="text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-md font-bold">Jitter: 4.1ms</span>
+</div>
+</div>
+</section>
+<!-- Right Column: Observability AI Pipeline & Semantic Search (5 Cols in xl) -->
+<section class="xl:col-span-5 flex flex-col gap-4">
+<!-- Quick Natural Language Vector Search Card -->
+<div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm shadow-indigo-100/30 relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[20px]">saved_search</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-slate-900">Semantic Video Search</h3>
+</div>
+<span class="font-label-sm text-[11px] font-bold text-indigo-700 bg-indigo-50 border border-indigo-200/60 px-2.5 py-0.5 rounded-full">CLIP ViT-B/32</span>
+</div>
+<p class="font-body-sm text-xs text-slate-500 mb-4 leading-relaxed">
+            Execute natural language queries directly across 512-dimensional visual embeddings in ChromaDB.
+          </p>
+<form class="relative flex items-center" onsubmit="event.preventDefault();">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-indigo-500 font-label-sm text-xs font-bold">
+<span class="material-symbols-outlined text-[18px] mr-1">auto_awesome</span>
+<span>Ask AI:</span>
+</div>
+<input class="w-full bg-slate-50 border border-slate-200/80 pl-24 pr-12 py-3 rounded-2xl text-slate-800 font-body-md text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 shadow-inner" placeholder="e.g. person with red backpack walking left..." type="text" value="person with red backpack"/>
+<button class="absolute right-2 p-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 transition-all flex items-center justify-center shadow-sm shadow-indigo-300" type="submit">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</button>
+</form>
+<!-- Quick Chip Triggers -->
+<div class="flex items-center gap-2 flex-wrap mt-3.5">
+<span class="font-label-sm text-xs font-semibold text-slate-400">Suggestions:</span>
+<button class="font-label-sm text-xs px-2.5 py-1 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200/60 transition-all flex items-center gap-1.5 font-medium" type="button">
+<span>"Man with red backpack"</span>
+<span class="text-[10px] bg-indigo-200/60 text-indigo-800 px-1 rounded-md font-bold">0.92</span>
+</button>
+<button class="font-label-sm text-xs px-2.5 py-1 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/60 transition-all flex items-center gap-1.5 font-medium" type="button">
+<span>"Entering doorway"</span>
+<span class="text-[10px] bg-slate-200 text-slate-700 px-1 rounded-md font-bold">0.86</span>
+</button>
+<button class="font-label-sm text-xs px-2.5 py-1 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200/60 transition-all flex items-center gap-1 font-medium" type="button">
+<span>"Bicycle parked"</span>
+</button>
+</div>
+</div>
+<!-- AI Inference Pipeline Observability Card -->
+<div class="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm shadow-indigo-100/30 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[20px]">monitor_heart</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-slate-900">Neural Pipeline Observability</h3>
+</div>
+<span class="font-label-sm text-[11px] text-emerald-700 bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full font-bold">ALL NOMINAL</span>
+</div>
+<!-- Pipeline Stack Visual List -->
+<div class="flex flex-col gap-2.5">
+<!-- YOLO Detection Node -->
+<div class="bg-slate-50/80 hover:bg-slate-50 border border-slate-100 p-3 rounded-2xl flex items-center justify-between transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">filter_center_focus</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-xs font-bold text-slate-800">Object Detection (YOLOv8s)</span>
+<span class="font-label-sm text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded-full">ACTIVE</span>
+</div>
+<div class="font-label-sm text-xs text-slate-400">PyTorch CUDA • mAP@50: 89.2%</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-xs font-bold text-indigo-600">18ms</span>
+<p class="font-label-sm text-[11px] text-slate-400">latency</p>
+</div>
+</div>
+<!-- ByteTrack Spatial Tracking Node -->
+<div class="bg-slate-50/80 hover:bg-slate-50 border border-slate-100 p-3 rounded-2xl flex items-center justify-between transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">route</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-xs font-bold text-slate-800">Spatial Tracking (ByteTrack)</span>
+<span class="font-label-sm text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded-full">ONLINE</span>
+</div>
+<div class="font-label-sm text-xs text-slate-400">Kalman Filter • 0 Track Drops</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-xs font-bold text-emerald-600">4 Tracklets</span>
+<p class="font-label-sm text-[11px] text-slate-400">0 lost</p>
+</div>
+</div>
+<!-- CLIP Embeddings Generator -->
+<div class="bg-slate-50/80 hover:bg-slate-50 border border-slate-100 p-3 rounded-2xl flex items-center justify-between transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-xs font-bold text-slate-800">Embeddings (ViT-B/32)</span>
+<span class="font-label-sm text-[10px] font-bold text-amber-700 bg-amber-100 px-1.5 py-0.2 rounded-full">SYNC</span>
+</div>
+<div class="font-label-sm text-xs text-slate-400">512-dim Normalized Dense Vector</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-xs font-bold text-amber-600">24ms</span>
+<p class="font-label-sm text-[11px] text-slate-400">per keyframe</p>
+</div>
+</div>
+<!-- ChromaDB Vector Store -->
+<div class="bg-slate-50/80 hover:bg-slate-50 border border-slate-100 p-3 rounded-2xl flex items-center justify-between transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-xs font-bold text-slate-800">Vector Store (ChromaDB)</span>
+<span class="font-label-sm text-[10px] font-bold text-emerald-700 bg-emerald-100 px-1.5 py-0.2 rounded-full">CONNECTED</span>
+</div>
+<div class="font-label-sm text-xs text-slate-400">HNSW Flat Index • Local Store</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-xs font-bold text-slate-700">~12ms</span>
+<p class="font-label-sm text-[11px] text-slate-400">ANN query</p>
+</div>
+</div>
+</div>
+<!-- Storage Buffer & NVMe Gauge Meter -->
+<div class="pt-2 flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-xs">
+<span class="text-slate-500 font-medium">H.264 Ring Buffer &amp; Vault</span>
+<span class="text-slate-800 font-bold">64.2 GB / 128 GB (50.1%)</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-slate-100 overflow-hidden p-0.5">
+<div class="bg-gradient-to-r from-indigo-500 to-sky-400 h-full rounded-full transition-all duration-500" style="width: 50.1%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-slate-400 text-[11px]">
+<span>Circular Retention: 7 Days</span>
+<span class="text-emerald-600 font-bold">AUTO-FLUSH HEALTHY</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Bottom Section: Recent Detection Activity Timeline -->
+<section class="flex flex-col gap-4">
+<!-- Section Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[20px]">history</span>
+</div>
+<h2 class="font-headline-lg text-lg font-bold text-slate-900 tracking-tight">Recent Detection Stream</h2>
+</div>
+<p class="font-body-sm text-xs text-slate-500 mt-1">Live chronological event stream correlated with ByteTrack identifiers and CLIP indices.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-label-md text-xs font-bold border border-slate-200/80 shadow-xs transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-slate-400">filter_list</span>
+<span>Filter Classes</span>
+</button>
+<a class="px-4 py-2 rounded-xl bg-indigo-600 text-white font-headline-md text-xs font-bold hover:bg-indigo-700 transition-all flex items-center gap-1.5 shadow-sm shadow-indigo-300/40" data-path="smart-search" href="#">
+<span>Explore in Smart Search</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Detection Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Detection Event Card 1 -->
+<div class="bg-white rounded-3xl overflow-hidden group hover:shadow-lg hover:border-indigo-200 border border-slate-200/80 shadow-sm shadow-indigo-100/30 transition-all flex flex-col">
+<div class="relative w-full aspect-video bg-slate-100 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Surveillance snapshot high-contrast crop of a college student walking through an entrance corridor carrying a bright red tech backpack, realistic cctv framing with teal digital edge highlight and subtle cyan bounding box." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCd0aUOFVEVZtnr1LazLmzVCkI14zTOia7jBreKNeF5iS-wAPB-rrWI93YRVggciu1j8frPxKNDsc4yx8u2WSSnWpzW58_V6eU8x0FZ_YvI9tTLPiu0gu2Lg0SoF0J_qRH-CmfSv7ttfkn82YIP9Zyi0JiiIwp3zeM4wegK6mUZPr91kJ7XXjqPGNpLojho9kbqyBEByGweLd0fwHLWLO-ZsnmGde4IraL_IdhUOqw')">
+</div>
+<!-- HUD Card Overlays -->
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] px-2.5 py-0.5 rounded-full bg-white/95 text-indigo-700 font-bold shadow-sm">#TRK-1042</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-emerald-500 text-white font-bold shadow-xs">94%</span>
+</div>
+<div class="absolute bottom-2 right-2 font-label-sm text-[11px] px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-sm text-slate-600 font-semibold shadow-xs">
+              14:31:42 UTC
+            </div>
+</div>
+<div class="p-4 flex flex-col justify-between flex-1 gap-3">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-headline-md text-sm font-bold text-slate-900 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-indigo-600">person</span>
+                  Person &amp; Backpack
+                </span>
+<span class="font-label-sm text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Verified</span>
+</div>
+<p class="font-body-sm text-xs text-slate-500 line-clamp-2">Individual entering lobby door North, carrying oversized red textile pack.</p>
+</div>
+<div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+<span class="font-label-sm text-xs font-semibold text-slate-400">Sim: <strong class="text-slate-700">0.9412</strong></span>
+<button class="text-indigo-600 hover:text-indigo-800 font-label-sm text-xs font-bold flex items-center gap-1 transition-all" type="button">
+<span>Play Clip</span>
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Detection Event Card 2 -->
+<div class="bg-white rounded-3xl overflow-hidden group hover:shadow-lg hover:border-indigo-200 border border-slate-200/80 shadow-sm shadow-indigo-100/30 transition-all flex flex-col">
+<div class="relative w-full aspect-video bg-slate-100 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Surveillance camera snapshot frame of an engineering faculty member in dark blazer entering double glass doors, indoor daylight atmosphere, subtle glowing tracking reticle on subject." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCd8_Ai9lZT879nTJnVZxCTplwdEc6sVtSdVIkdx8PDNfTgYzEknU9_3u5lSeczif7NSv5FuKvOuTWrTZG8UJbFfXOiI8ZLdatdd2WUMB9Ks-wb8HgKnYbn5fjl0BdEBnMSlG4X5dBV8UOCkh2olkej_zUZq4nF84tX5NJH3PubkFNI6bmHguRhj3_thFmLVpNtMQA0UipA-nsAslyXXM3sP_D_yjIW4hS70bU65H0')">
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] px-2.5 py-0.5 rounded-full bg-white/95 text-indigo-700 font-bold shadow-sm">#TRK-1039</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-emerald-500 text-white font-bold shadow-xs">91%</span>
+</div>
+<div class="absolute bottom-2 right-2 font-label-sm text-[11px] px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-sm text-slate-600 font-semibold shadow-xs">
+              14:28:15 UTC
+            </div>
+</div>
+<div class="p-4 flex flex-col justify-between flex-1 gap-3">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-headline-md text-sm font-bold text-slate-900 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-indigo-600">person</span>
+                  Person Entry
+                </span>
+<span class="font-label-sm text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">Archived</span>
+</div>
+<p class="font-body-sm text-xs text-slate-500 line-clamp-2">Approached turnstile corridor towards East wing lecture hall.</p>
+</div>
+<div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+<span class="font-label-sm text-xs font-semibold text-slate-400">Sim: <strong class="text-slate-700">0.8876</strong></span>
+<button class="text-indigo-600 hover:text-indigo-800 font-label-sm text-xs font-bold flex items-center gap-1 transition-all" type="button">
+<span>Play Clip</span>
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Detection Event Card 3 -->
+<div class="bg-white rounded-3xl overflow-hidden group hover:shadow-lg hover:border-indigo-200 border border-slate-200/80 shadow-sm shadow-indigo-100/30 transition-all flex flex-col">
+<div class="relative w-full aspect-video bg-slate-100 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Surveillance security camera angle of an outdoor bicycle rack near the building vestibule, silver road bike locked onto metal frame, campus pavers, high resolution security camera view." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCydcYTKnOp2jN-PKUyj0AaZomq0TLtSj9JMC5OaEJhk5bP1f_IEWde4RUqpEgqf2esFIeiXFrWTlrvrCZXtfwI3T0xrJGzjxISP7VyBa-qbnxq_HqNOpx7MYc6fBZI38nRfqA9wiQ-k2dCFDYseF0gRnKWUQ5I7m-M0vnyX96oHcF9VmfBKnX4a-SBXAIlmhmJXC0a7q2_BHItToSYFmF-sM9lSz7Z9R3kuROaoto')">
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] px-2.5 py-0.5 rounded-full bg-white/95 text-amber-700 font-bold shadow-sm">#OBJ-3880</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-emerald-500 text-white font-bold shadow-xs">88%</span>
+</div>
+<div class="absolute bottom-2 right-2 font-label-sm text-[11px] px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-sm text-slate-600 font-semibold shadow-xs">
+              14:22:04 UTC
+            </div>
+</div>
+<div class="p-4 flex flex-col justify-between flex-1 gap-3">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-headline-md text-sm font-bold text-slate-900 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-amber-500">pedal_bike</span>
+                  Bicycle Static
+                </span>
+<span class="font-label-sm text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">Stationary</span>
+</div>
+<p class="font-body-sm text-xs text-slate-500 line-clamp-2">Bicycle locked at vestibule rack frame slot 04. No movement detected.</p>
+</div>
+<div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+<span class="font-label-sm text-xs font-semibold text-slate-400">Sim: <strong class="text-slate-700">0.8540</strong></span>
+<button class="text-indigo-600 hover:text-indigo-800 font-label-sm text-xs font-bold flex items-center gap-1 transition-all" type="button">
+<span>Play Clip</span>
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Detection Event Card 4 -->
+<div class="bg-white rounded-3xl overflow-hidden group hover:shadow-lg hover:border-indigo-200 border border-slate-200/80 shadow-sm shadow-indigo-100/30 transition-all flex flex-col">
+<div class="relative w-full aspect-video bg-slate-100 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300" data-alt="Campus security camera view through parking lane barrier gate, white campus maintenance utility cart vehicle pausing at gate scanner, outdoor natural afternoon light." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMwZps9bVd7eczsNQBDWv3Ipp03SHLSj5YMmrsDG5Ywk4gGAjfjepKiZL_s05T58YVrjQTAwzL1KbYBApOO7KI0DpaARLYxkS0ndhVmlgBZaecbG1dwKwbNaHhWpGFQ0-O9DTaDGyxbmnyGrhuorOKfaLHOswMVSRQlRtTOjR4WAVhAJ6-IX7BkbpeS7SXP2gCl6zzyDtx0aVC9BileV906b3ke3PT9KiPs85jC3E')">
+</div>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="font-label-sm text-[11px] px-2.5 py-0.5 rounded-full bg-white/95 text-indigo-700 font-bold shadow-sm">#TRK-1025</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded-full bg-emerald-500 text-white font-bold shadow-xs">96%</span>
+</div>
+<div class="absolute bottom-2 right-2 font-label-sm text-[11px] px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-sm text-slate-600 font-semibold shadow-xs">
+              14:15:30 UTC
+            </div>
+</div>
+<div class="p-4 flex flex-col justify-between flex-1 gap-3">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-headline-md text-sm font-bold text-slate-900 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-sky-500">directions_car</span>
+                  Service Vehicle
+                </span>
+<span class="font-label-sm text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full">Authorized</span>
+</div>
+<p class="font-body-sm text-xs text-slate-500 line-clamp-2">Campus facility cart passed delivery driveway checkpoint.</p>
+</div>
+<div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+<span class="font-label-sm text-xs font-semibold text-slate-400">Sim: <strong class="text-slate-700">0.9620</strong></span>
+<button class="text-indigo-600 hover:text-indigo-800 font-label-sm text-xs font-bold flex items-center gap-1 transition-all" type="button">
+<span>Play Clip</span>
+<span class="material-symbols-outlined text-[16px]">play_circle</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+    (function initDashboard() {
+      // Dynamic live frame counter ticker
+      const framesEl = document.getElementById('frames-counter');
+      if (framesEl) {
+        let count = 1489204;
+        setInterval(() => {
+          count += Math.floor(Math.random() * 4) + 1;
+          framesEl.textContent = count.toLocaleString();
+        }, 1200);
+      }
+
+      // Live UTC clock in HUD
+      const timestampEl = document.getElementById('hud-timestamp');
+      if (timestampEl) {
+        setInterval(() => {
+          const now = new Date();
+          const str = now.toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
+          timestampEl.textContent = str;
+        }, 1000);
+      }
+
+      // Stream pause/resume interactive toggle
+      const monitorBtn = document.getElementById('toggle-monitor-btn');
+      let isStreaming = true;
+      if (monitorBtn) {
+        monitorBtn.addEventListener('click', () => {
+          isStreaming = !isStreaming;
+          if (isStreaming) {
+            monitorBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">pause</span><span>Pause Stream</span>';
+            monitorBtn.classList.remove('bg-slate-100', 'text-slate-700');
+            monitorBtn.classList.add('bg-indigo-600', 'text-white');
+          } else {
+            monitorBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">play_arrow</span><span>Resume Stream</span>';
+            monitorBtn.classList.remove('bg-indigo-600', 'text-white');
+            monitorBtn.classList.add('bg-slate-100', 'text-slate-700');
+          }
+        });
+      }
+
+      // Audio mic toggle
+      const audioBtn = document.getElementById('toggle-audio-btn');
+      let isMuted = true;
+      if (audioBtn) {
+        audioBtn.addEventListener('click', () => {
+          isMuted = !isMuted;
+          const icon = audioBtn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = isMuted ? 'mic_off' : 'mic';
+            icon.classList.toggle('text-emerald-600', !isMuted);
+          }
+        });
+      }
+
+      // Overlays Toggle Button
+      const overlayBtn = document.getElementById('toggle-overlay-btn');
+      let overlaysActive = true;
+      if (overlayBtn) {
+        overlayBtn.addEventListener('click', () => {
+          overlaysActive = !overlaysActive;
+          const textSpan = overlayBtn.querySelector('span:last-child');
+          if (textSpan) {
+            textSpan.textContent = overlaysActive ? 'Overlays: ON' : 'Overlays: OFF';
+          }
+          overlayBtn.classList.toggle('text-emerald-700', overlaysActive);
+          overlayBtn.classList.toggle('bg-emerald-50', overlaysActive);
+          overlayBtn.classList.toggle('text-slate-400', !overlaysActive);
+          overlayBtn.classList.toggle('bg-slate-50', !overlaysActive);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

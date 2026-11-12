@@ -1,0 +1,22 @@
+# Tier: SMALL — 1-3 cameras on modest CPU-only hardware (e.g. Intel NUC, Raspberry Pi 5)
+#   docker compose -f docker-compose.yml -f docker-compose.small.yml up --build
+#
+# Trades: no ReID stitching, no batch reprocessing, lighter model, more throttling.
+
+services:
+  backend:
+    environment:
+      CLIP_MODEL: ViT-B-32
+      CLIP_PRETRAINED: laion400m_e32
+      CLIP_INFERENCE_THREADS: 2
+      FRAME_SAMPLE_INTERVAL_DEFAULT: 0.5
+      PREVIEW_FPS: 1
+      DETECTOR_MODEL: yolov8n
+      DETECTOR_CONFIDENCE_THRESHOLD: 0.40
+      REID_MODEL: disabled
+      REID_ENABLED_DEFAULT: 0
+      BATCH_REPROCESS_ENABLED_DEFAULT: 0
+      EDGE_ADAPTIVE_LOAD: 1
+      RETENTION_HOURS_DEFAULT: 48
+      NUMPY_STORE_MAX_VECTORS: 20000
+      SEED_DEMO_SIM_CAMERAS: 1

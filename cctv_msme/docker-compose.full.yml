@@ -1,0 +1,30 @@
+# Tier: FULL — 12+ cameras on dedicated GPU hardware (CUDA).
+#   docker compose -f docker-compose.yml -f docker-compose.full.yml up --build
+#
+# Heaviest models, longest retention, all Phase 2/3/4 features on.
+# Set CLIP_DEVICE=cuda (backend .env) to enable GPU for embedding; YOLO auto-detects CUDA.
+
+services:
+  backend:
+    environment:
+      CLIP_MODEL: ViT-B-32
+      CLIP_PRETRAINED: laion400m_e32
+      CLIP_INFERENCE_THREADS: 8
+      FRAME_SAMPLE_INTERVAL_DEFAULT: 0.2
+      PREVIEW_FPS: 2
+      DETECTOR_MODEL: yolov8m
+      DETECTOR_CONFIDENCE_THRESHOLD: 0.30
+      REID_MODEL: osnet_x1_0_msmt17
+      REID_ENABLED_DEFAULT: 1
+      BATCH_REPROCESS_ENABLED_DEFAULT: 1
+      EDGE_ADAPTIVE_LOAD: 0
+      RETENTION_HOURS_DEFAULT: 168
+      NUMPY_STORE_MAX_VECTORS: 200000
+      SEED_DEMO_SIM_CAMERAS: 1
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

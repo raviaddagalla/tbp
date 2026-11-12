@@ -1,0 +1,30 @@
+PRODUCTION QUALITY STANDARDS - SHIFT SUMMARY GUIDE
+
+Batch Acceptance Criteria
+Steel sheets must measure within plus or minus 0.5 millimetre of the
+order specification. Surface defects such as rust pitting deeper than
+0.2 mm cause rejection. Every batch carries a unique batch number
+stamped on the bundle tag.
+
+Inspection Points
+1. Visual check at the cutting station - look for burrs and edge cracks.
+2. Dimensional check at the drilling station - every 50th piece is
+   measured against the drawing.
+3. Weld inspection at the welding bay - fillet welds are checked for
+   porosity and undercut before the part moves to painting.
+
+Defect Codes
+D1 - wrong dimension, D2 - surface rust, D3 - burr, D4 - weld porosity,
+D5 - paint adhesion failure. The inspector records the defect code and
+the machine that produced the part in the daily log.
+
+Shift Handover
+The outgoing shift records production count, rejected pieces, machine
+downtime, and pending quality checks in the handover register. The
+incoming shift supervisor signs the register before starting work.
+
+Downtime Reporting
+Any machine stoppage longer than 15 minutes is reported to the floor
+supervisor with the reason code: material shortage, tool change,
+maintenance, or power failure. Downtime is summarised in the weekly
+efficiency report.

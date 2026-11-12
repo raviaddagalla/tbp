@@ -1,0 +1,42 @@
+# Backend image: FastAPI + CLIP + Chroma + ingestion workers
+# CPU-only torch keeps the image small (~3.5 GB). For GPU support,
+# remove the CPU index flag and install CUDA-enabled torch.
+FROM python:3.13-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    TORCH_INDEX_URL=https://download.pytorch.org/whl/cpu
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        ffmpeg \
+        libgl1 \
+        libglib2.0-0 \
+        tesseract-ocr \
+        curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY backend/requirements.txt .
+RUN pip install --index-url ${TORCH_INDEX_URL} torch==2.5.1+cpu \
+    && pip install -r requirements.txt
+
+COPY backend/app ./app
+COPY backend/scripts ./scripts
+COPY backend/sample_data ./sample_data
+
+# Persistent state (SQLite, uploads, thumbs, clips, vector store)
+ENV DATABASE_URL=sqlite:///./data/factory.db \
+    DATA_DIR=./data \
+    VECTOR_STORE_BACKEND=chroma \
+    CHROMA_DIR=./data/vectorstore \
+    CORS_ORIGINS=http://localhost:3000
+
+VOLUME ["/app/data"]
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=15s --timeout=5s --start-period=90s --retries=5 \
+    CMD curl -fs http://localhost:8000/api/health || exit 1
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
